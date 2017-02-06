@@ -1,0 +1,7 @@
+outbound requests:
+
+select date(ob.created_at) as created_dt,count(id) from outbound_requests ob
+where date(ob.created_at) > '2016-12-01'
+group by created_dt;
+
+
